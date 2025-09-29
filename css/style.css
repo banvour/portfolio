@@ -187,10 +187,6 @@ a:active {
   margin: 0 0 5px 0;
 }
 
-post p {
-  align-items: flex-start;
-}
-
 .pixelart {
   height: 96px;
   image-rendering: pixelated;
