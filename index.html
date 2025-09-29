@@ -1,0 +1,110 @@
+<!-- All Rights Reserved © 2025 banvour
+ pls don't copy, thx -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>banvour</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.PNG">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>  
+<div class="page-wrapper">
+
+    <header class="site-header">
+        <div class="header-title">
+            <h1>about</h1>
+        </div>
+        <div class="header-logo">
+            <img src="images/banner-text.svg" class="opacity-down" alt="description and contact information">
+            <img src="images/logo.svg" alt="my logo, banvour written horizontally with a rounded border around it">
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="portfolio.html">portfolio</a></li>
+            <li><a href="index.html">about</a></li>
+            <li><button id="dark-mode-toggle">dark mode ☾</button></li>
+        </ul>
+    </nav>
+
+    <main class="main-container">
+        <img src="images/pixel-me.PNG" class="pixelart" alt="Pixel Icon">
+        <div class="main-content">
+            <div class="bubble">
+                <p>hi! i'm maja, i make art and study software- & web-development, nice to meet you.</p>
+            </div>
+            <div class="bubble">
+
+                <div class="feature commit-msg">
+                    <div class="commit-msg-header">
+                        <div class="commit-msg-header-facts">
+                            <h3>feature:</h3>
+                            <h3>25/10/25</h3>
+                        </div>
+                        <h2>small improvements</h2>
+                    </div>
+                    <p>
+                        + styled links to be extremely satisfying <i class="smol">(to me at least)</i><br>
+                        + minor ui/ux changes<br>
+                        + code declutter<br>
+                        - dark mode is next, i promise<br>
+                        - old version showcase
+                    </p>
+                </div>
+
+                <div class="feature commit-msg">
+                    <div class="commit-msg-header">
+                        <div class="commit-msg-header-facts">
+                            <h3>feature:</h3>
+                            <h3>24/10/25</h3>
+                        </div>
+                        <h2>changelog & portfolio page</h2>
+                    </div>
+                    <p>
+                        + implemented this bubble to post updates<br>
+                        + refreshed my <a href="https://lightwidget.com/">lightwidget</a> token to embed my instagram feed on the <a href="portfolio.html">portfolio page</a>
+                    </p>
+                </div>
+
+                <div class="feature commit-msg">
+                    <div class="commit-msg-header">
+                        <div class="commit-msg-header-facts">
+                            <h3>feature:</h3>
+                            <h3>23/10/25</h3>
+                        </div>
+                        <h2>built initial basic HTML structure and CSS</h2>
+                    </div>
+                    <p>
+                        after fumbling around with the design for a while i implemented:<br>
+                        + title, logo, navbar, speech bubble container, footer with socials & copyright and my pixel avatar (art not done yet, i'm actually drawing me sitting at a desk, but this version is all you get for now)
+                    </p>
+                    <img src="images/pixel-me.PNG" height="32px" text-align="center" alt="Pixel Icon">
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="socials">
+            <a href="https://github.com/banvour" target="_blank"><img src="images/github.png" class="opacity-up" alt="github logo, social link"></a>
+            <a href="https://ko-fi.com/banvour" target="_blank"><img src="images/ko-fi.webp" alt="ko-fi logo, donation link"></a>
+            <a href="https://instagram.com/banvour" target="_blank"><img src="images/instagram.png" alt="instagram logo, social link"></a>
+        </div>
+        <p>All Rights Reserved &copy; <span id="copyright-year"></span> banvour</p>
+        <p class="smol">The art on this website is handmade and owned by me, do not use it without permission.</p>
+    </footer>
+
+</div>
+
+  <script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
