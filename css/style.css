@@ -20,25 +20,25 @@ body p {
 
 a:link,
 a:visited {
-    color: rgb(74, 80, 105);
-    text-decoration: none;
-    border-bottom: 2px dotted rgba(74, 80, 105, 0.31);
-    position: relative;
-    top: 0;
-    left: 0;
-    transition: all 0.1s ease-out;
+  color: rgb(74, 80, 105);
+  text-decoration: none;
+  border-bottom: 2px dotted rgba(74, 80, 105, 0.31);
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.1s ease-out;
 }
 
 a:hover {
-    color: rgba(74, 80, 105, 0.942);
-    font-weight: bold;
-    border-bottom: 2px dotted rgba(74, 80, 105, 0.8);
+  color: rgba(74, 80, 105, 0.942);
+  font-weight: bold;
+  border-bottom: 2px dotted rgba(74, 80, 105, 0.8);
 }
 
 a:active {
-    color: rgba(108, 117, 152, 0.942);
-    top: 2px;
-    left: 2px;
+  color: rgba(108, 117, 152, 0.942);
+  top: 2px;
+  left: 2px;
 }
 
 .opacity-down {
@@ -55,7 +55,7 @@ a:active {
 .site-header {
   display: flex;
   justify-content: space-between;
-  align-items:end;
+  align-items: end;
   padding: 0;
   margin: 70px 0 0 0;
 }
@@ -93,20 +93,20 @@ a:active {
 
 .nav-bar a,
 .nav-bar button {
-    display: block;
-    padding: 3px 10px;
-    text-decoration: none;
-    color: inherit;
-    background: none;
-    border: none;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
+  display: block;
+  padding: 3px 10px;
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.nav-bar li +  li {
-    border-left: 1px solid rgba(0, 0, 0, 0.642);
+.nav-bar li+li {
+  border-left: 1px solid rgba(0, 0, 0, 0.642);
 }
 
 
@@ -122,22 +122,27 @@ a:active {
   flex-grow: 1;
 }
 
-.main-container h2 {
-  font-size: 12px;
-  margin: 0;
-  font-style: italic;
-}
-
-.main-container h3 {
-  font-size: 10px;
-  margin: 0;
-}
-
 .main-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-top: 30px;
+}
+
+.main-content h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.main-content h2 {
+  font-size: 12px;
+  margin: 0;
+  font-style: italic;
+}
+
+.main-content h3 {
+  font-size: 10px;
+  margin: 0;
 }
 
 .bubble {
@@ -149,7 +154,8 @@ a:active {
   align-items: center;
   flex-direction: column;
   position: relative;
-  padding: 15px 25px 10px 25px;
+  padding: 15px 25px 15px 25px;
+  gap: 10px;
 }
 
 .bubble::before {
@@ -165,36 +171,80 @@ a:active {
 
 .commit-msg {
   width: auto;
-  text-align: justify;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  margin: 5px 0 5px 0;
+  margin: 0;
   width: 100%;
   overflow-y: auto
+}
+
+.commit-msg:last-child {
+  margin-bottom: 12px;
+}
+
+.commit-msg-header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  margin: 0 0 5px 0;
 }
 
 .commit-msg-header-facts {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.642);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.356);
   margin: 0;
 }
 
-.commit-msg-header {
+.commit-msg-header-title {
   width: 100%;
-  margin: 0 0 5px 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.356);
+  margin: 0;
+  gap: 5px;
+}
+
+.commit-msg ul,li {
+  padding-left: 0;
+  margin: 0;
+}
+
+.commit-msg ul {
+  display: table;
+}
+
+.commit-msg li {
+  list-style: none;
+  display: table-row;
+}
+
+.commit-msg li::before {
+  content: "+ ";
+  display: table-cell;
+}
+
+.commit-msg li.undone::before {
+  font-weight: bold;
+  content: "- next up:";
+}
+
+.commit-msg li.issue::before {
+  content: "✓ ";
 }
 
 .pixelart {
   height: 96px;
+  width: 96px;
   image-rendering: pixelated;
   filter: drop-shadow(-12px 0px 0px rgba(0, 0, 0, 0.08));
 }
 
 
 /* ################ FOOTER ################ */
+
 .site-footer {
   display: flex;
   flex-direction: column;
@@ -213,13 +263,18 @@ a:active {
 
 .socials {
   display: flex;
-  gap: 4px;
+  gap: 10px;
   align-items: center;
   margin: 0 0 5px 0;
 }
 
 .socials img {
-    height: 16px;
-    display: block;
-    opacity: 65%;
+  height: 16px;
+  display: block;
+  opacity: 65%;
+  transition: all 0.1s ease-out;
+}
+
+.socials a {
+  border: none;
 }
